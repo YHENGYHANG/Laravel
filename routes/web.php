@@ -15,6 +15,10 @@ use Illuminate\Support\Facades\Route;
 //     return view('pages.contact');
 // })->name('contact');
 
+Route::get('/', function () {
+    return view('About');
+})->name('about');
+
 Route::get('/product', function () {
     return view('product');
 })->name('product');
@@ -26,3 +30,7 @@ Route::get('/category', function () {
 Route::get('/ImportPage', function () {
     return view('import.ImportPage');
 })->name('import');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
