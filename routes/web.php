@@ -34,3 +34,4 @@ Route::get('/ImportPage', function () {
 // Auth::routes();
 
 Route::get('/student', [studentController::class, 'index'])->name('student');
+
